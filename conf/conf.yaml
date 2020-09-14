@@ -1,0 +1,20 @@
+# 测试环境机器的信息
+testSystem:
+  proto: "http"
+  host: "192.168.31.88"
+  port: "9066"
+  loginName: "autotest"
+  password: "0192023A7BBD73250516F069DF18B500"
+  userType: "system"
+
+vertica:
+  host: "192.168.21.40"
+  port: "5433"
+  database: "dbadmin"
+  user: "dbadmin"
+  password: "123456"
+  init_file: "prepare_data.sql"  # the test data initial
+  clean_file: "clean_data.sql"  # clean test data in database
+
+# file:
+#   case_file: "/Users/eoitek/PycharmProjects/CMDB/data/cmdb_data.xlsx"
