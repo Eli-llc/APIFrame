@@ -156,3 +156,15 @@ insert into public.cmdb_ci_people_rel(id,rel_id,ci_id,people_id,status_id,not_sy
 insert into public.cmdb_ci_people_rel(id,rel_id,ci_id,people_id,status_id,not_sync_flag,active_flag,valid_from,valid_to,created,created_by,updated,updated_by) values(457053585717096,2003,'SH-server-security','wangwu',9201,'f','t',1593569116000,253400716799000,1577808000000,0,1577808000000,0);
 insert into public.cmdb_ci_people_rel(id,rel_id,ci_id,people_id,status_id,not_sync_flag,active_flag,valid_from,valid_to,created,created_by,updated,updated_by) values(457053585717097,2205,'SH-server-security','lisi',9201,'f','t',1593569116000,253400716799000,1577808000000,0,1577808000000,0);
 commit;
+
+-- change status of CI to 7002, people to 8002, and relation to 9002, as other product only query the specific status.
+/*
+start transaction;
+update public.cmdb_ci_server set status_id = 7002;
+update public.cmdb_ci_service set status_id = 7002;
+update public.cmdb_ci_cluster set status_id = 7002;
+update public.cmdb_people set status_id = 8002;
+update public.cmdb_ci_rel set status_id = 9002;
+update public.cmdb_ci_people_rel set status_id = 9002;
+commit;
+*/
